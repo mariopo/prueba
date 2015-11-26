@@ -13,7 +13,7 @@ let rangoVelocidadBaja = 1...20
 let rangoVelocidadMedia = 21...50
 let rangoVelocidadAlta = 51...120
 
-
+/*
 enum Velocidades : Int{
     case Apagado = 0, VelocidadBaja = 20, VelocidadMedia = 50, VelocidadAlta = 120
     
@@ -32,10 +32,19 @@ enum Velocidades : Int{
         }
     }
 }
+*/
+
+enum Velocidades : Int{
+    case Apagado = 0, VelocidadBaja = 20, VelocidadMedia = 50, VelocidadAlta = 120
+    
+    init(velocidadInicial : Velocidades){
+        self = velocidadInicial
+        }
+}
 
 class Auto{
     
-    var velocidad = Velocidades(velocidadInicial: apagado)
+    var velocidad = Velocidades(velocidadInicial: .Apagado)
     
     init(velocidad: Velocidades){
         self.velocidad = velocidad
