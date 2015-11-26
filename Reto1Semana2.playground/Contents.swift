@@ -1,4 +1,6 @@
 //: Playground - noun: reto1Semana2
+//: Autor: Mario Porras
+//: Fecha: 12/nov/2015
 
 import UIKit
 
