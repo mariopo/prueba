@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ordenaTuPizza2 WatchKit 1 App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>ordenaTuPizza2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>311999361CD859E10073B45C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31DA0BF11CE8335600BEBCAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
