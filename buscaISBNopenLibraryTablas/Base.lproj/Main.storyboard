@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -37,7 +38,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idv-US-5RH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="-83"/>
+            <point key="canvasLocation" x="1446" y="-73"/>
         </scene>
         <!--DetalleVC-->
         <scene sceneID="hoo-V2-EuU">
@@ -179,22 +180,22 @@
                                 <exclude reference="xun-s8-rNT"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0Zx-k6-F3R"/>
-                                <exclude reference="7QK-75-DFa"/>
-                                <exclude reference="GVN-6L-hgd"/>
-                                <exclude reference="Mhi-lm-SxL"/>
-                                <exclude reference="g5b-er-JNw"/>
-                                <exclude reference="Ukj-xf-JQm"/>
-                                <exclude reference="W6d-LO-8kL"/>
-                                <exclude reference="yZU-gx-qen"/>
+                                <exclude reference="tvk-QT-GLk"/>
                                 <exclude reference="MXn-5g-LNn"/>
                                 <exclude reference="VPf-vd-etK"/>
                                 <exclude reference="kiD-jU-YVz"/>
                                 <exclude reference="raK-VK-Vhi"/>
                                 <exclude reference="vop-u8-aFy"/>
                                 <exclude reference="y3C-nS-kCA"/>
+                                <exclude reference="Ukj-xf-JQm"/>
+                                <exclude reference="W6d-LO-8kL"/>
+                                <exclude reference="yZU-gx-qen"/>
+                                <exclude reference="0Zx-k6-F3R"/>
+                                <exclude reference="7QK-75-DFa"/>
+                                <exclude reference="GVN-6L-hgd"/>
+                                <exclude reference="Mhi-lm-SxL"/>
+                                <exclude reference="g5b-er-JNw"/>
                                 <exclude reference="2Af-B0-I1x"/>
-                                <exclude reference="tvk-QT-GLk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -206,22 +207,22 @@
                                 <include reference="xun-s8-rNT"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0Zx-k6-F3R"/>
-                                <include reference="7QK-75-DFa"/>
-                                <include reference="GVN-6L-hgd"/>
-                                <include reference="Mhi-lm-SxL"/>
-                                <include reference="g5b-er-JNw"/>
-                                <include reference="Ukj-xf-JQm"/>
-                                <include reference="W6d-LO-8kL"/>
-                                <include reference="yZU-gx-qen"/>
+                                <include reference="tvk-QT-GLk"/>
                                 <include reference="MXn-5g-LNn"/>
                                 <include reference="VPf-vd-etK"/>
                                 <include reference="kiD-jU-YVz"/>
                                 <include reference="raK-VK-Vhi"/>
                                 <include reference="vop-u8-aFy"/>
                                 <include reference="y3C-nS-kCA"/>
+                                <include reference="Ukj-xf-JQm"/>
+                                <include reference="W6d-LO-8kL"/>
+                                <include reference="yZU-gx-qen"/>
+                                <include reference="0Zx-k6-F3R"/>
+                                <include reference="7QK-75-DFa"/>
+                                <include reference="GVN-6L-hgd"/>
+                                <include reference="Mhi-lm-SxL"/>
+                                <include reference="g5b-er-JNw"/>
                                 <include reference="2Af-B0-I1x"/>
-                                <include reference="tvk-QT-GLk"/>
                             </mask>
                         </variation>
                     </view>
@@ -234,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gc-oW-kKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2005.5" y="-83"/>
+            <point key="canvasLocation" x="2196" y="-73"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PGb-da-rJW">
