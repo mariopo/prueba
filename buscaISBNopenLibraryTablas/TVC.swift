@@ -6,22 +6,27 @@
 //  Copyright © 2016 MAPC. All rights reserved.
 //
 
-struct libros {
-    var isbn : String
-    var titulo : String
+
+import UIKit
+
+struct Lista_Libros {
+    var isbn: String
+    var titulo: String
     
-    init(isbn : String, titulo : String){
+    init(isbn: String, titulo:String){
         self.isbn = isbn
         self.titulo = titulo
     }
 }
 
-import UIKit
-
-class TVC: UITableViewController {
+class TVC: UITableViewController, DataEnteredDelegate {
     
-    var isbns = [String]()
-    var tupla = [libros]()
+    var tupla = Libros(isbn: "", titulo: "")
+    var lista = [Lista_Libros]()
+    
+    var otroLibro = Lista_Libros(isbn: "", titulo: "")
+    
+    var incluir : Bool = false
     
 
     override func viewDidLoad() {
@@ -29,11 +34,7 @@ class TVC: UITableViewController {
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
-        // let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(insertNewObject(_:)))
-        let addButton = UIBarButtonItem(title:"Agrega",style: UIBarButtonItemStyle.Plain, target: self, action:#selector(self.nuevoISBN(_:)))
-        self.navigationItem.rightBarButtonItem = addButton
-        
-        self.title = "\"LIBROS\""
+        self.title = "LIBROS"
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
         // Uncomment the following line to preserve selection between presentations
@@ -43,63 +44,18 @@ class TVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    @IBAction func nuevoISBN(sender: AnyObject) {
-        var titulol : String = ""
-        var librol = libros(isbn: "", titulo: "")
-        let alert = UIAlertController(title: "ISBN nuevo", message: "Agrega un ISBN", preferredStyle: .Alert)
+    override func viewWillAppear(animated: Bool) {
+        var list = Lista_Libros(isbn: "",titulo: "")
         
-        let saveAction = UIAlertAction(title: "Guardar", style: .Default, handler: {(action:UIAlertAction) -> Void in
-            let textField = alert.textFields!.first
-            self.isbns.append(textField!.text!)
-            titulol = self.buscaTitulo(textField!.text!)
-            librol.isbn = textField!.text!
-            librol.titulo = titulol
-            self.tupla.append(librol)
-            self.tableView.reloadData()
-        })
+        super.viewWillAppear(animated)
         
-        let cancelAction = UIAlertAction(title: "Cancelar", style: .Default) {(action:UIAlertAction) -> Void in
+        if self.incluir {
+            list.isbn = tupla.isbn
+            list.titulo = tupla.titulo
+            self.incluir = false
+            self.lista.append(list)
         }
-        alert.addTextFieldWithConfigurationHandler{
-            (textField: UITextField) -> Void in
-        }
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    func buscaTitulo(isbnl:String) -> String{
-        var isbn_titulo : String = ""
-        let etiqueta1 = "ISBN:"
-        let dir: String = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:"
-    // --> buscaTitulo
-        let urls = dir + isbnl
-        let url = NSURL(string: urls)
-        let datos: NSData? = NSData(contentsOfURL: url!)
-        
-        if datos == nil{
-            let alert = UIAlertController(title: "Atención", message:"Hay problemas para atender su solicitud. Revisa tu conexión a internet", preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .Default) { _ in })
-            self.presentViewController(alert, animated: true) { }
-        } else{
-            do {
-                let json = try NSJSONSerialization.JSONObjectWithData(datos!, options: NSJSONReadingOptions.MutableLeaves)
-                let dico1 = json as! NSDictionary
-                if dico1[etiqueta1 + isbnl] != nil {
-                    let dico2 = dico1[etiqueta1 + isbnl] as! NSDictionary
-                    if dico2["title"] != nil{
-                        isbn_titulo = dico2["title"] as! NSString as String
-                    }
-                }
-            }
-            catch _ {
-                
-            }
-        }
-    // <-- buscaTitulo
-        
-        return isbn_titulo
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -116,7 +72,7 @@ class TVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.isbns.count
+        return self.lista.count
     }
 
     
@@ -124,7 +80,7 @@ class TVC: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Celda", forIndexPath: indexPath)
         
         // Configure the cell...
-        cell.textLabel?.text = self.tupla[indexPath.row].titulo
+        cell.textLabel?.text = self.lista[indexPath.row].titulo
         
         return cell
     }
@@ -172,11 +128,26 @@ class TVC: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let cc = segue.destinationViewController as! detalleVC
         
-        let ip = self.tableView.indexPathForSelectedRow
-        cc.isbn1 = self.tupla[ip!.row].isbn
+        if segue.identifier == "agrega"{
+        
+            self.incluir = true
+            cc.isbn1 = ""
+            
+            let secondViewController = segue.destinationViewController as! detalleVC
+            secondViewController.delegate = self
+            
+        }else{
+        
+            let ip = self.tableView.indexPathForSelectedRow
+            cc.isbn1 = self.lista[ip!.row].isbn
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     
+    func userDidEnterInformation(info: Libros) {
+        tupla = info
+    }
+        
 
 }

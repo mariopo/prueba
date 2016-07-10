@@ -10,10 +10,14 @@ import UIKit
 
 class detalleVC: UIViewController {
     
+    var tupla = Libros(isbn: "", titulo: "")
+    
+    weak var delegate: DataEnteredDelegate? = nil
+    
     var isbn1 : String = ""
     
     @IBOutlet weak var tituloL: UILabel!
-    @IBOutlet weak var isbnL: UILabel!
+    @IBOutlet weak var isbnTF: UITextField!
     @IBOutlet weak var autoresL: UILabel!
     @IBOutlet weak var portadaIV: UIImageView!
 
@@ -83,19 +87,53 @@ class detalleVC: UIViewController {
         tituloL.text = "Título: " + self.titulo
         
         autoresL.text = "Autor: " + self.autores
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        isbn = isbn1
-        self.isbnL.text = isbn1
-        
-        sincrono()
+        if isbn1 != "" {
+            
+            isbnTF.enabled = false
+            
+            isbn = isbn1
+            isbnTF.text = isbn1
+    
+            sincrono()
+            
+            self.tupla.isbn = ""
+            self.tupla.titulo = ""
+            
+        }else{
+            isbnTF.enabled = true
+        }
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func ingresaISBN(sender: AnyObject) {
+        isbn = isbnTF.text!
+        sincrono()
 
+        self.tupla.isbn = self.isbn
+        self.tupla.titulo = self.titulo
+    }
+    
+    @IBAction func backgroundTap(sender: UIControl)
+    {
+        isbnTF.resignFirstResponder()
+    }
+    
+    @IBAction func textFieldDoneEditing(sender: UITextField)
+    {
+        sender.resignFirstResponder()  // Desaparecer el teclado
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+     // call this method on whichever class implements our delegate protocol
+        delegate?.userDidEnterInformation(tupla)
+    }
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
