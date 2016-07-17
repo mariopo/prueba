@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class detalleVC: UIViewController {
+    
+    var contexto : NSManagedObjectContext? = nil
     
     var tupla = Libros(isbn: "", titulo: "")
     
     weak var delegate: DataEnteredDelegate? = nil
     
     var isbn1 : String = ""
+    
+    var tituloS: String = ""
+    var autoresS: String = ""
     
     @IBOutlet weak var tituloL: UILabel!
     @IBOutlet weak var isbnTF: UITextField!
@@ -86,7 +92,11 @@ class detalleVC: UIViewController {
         }
         tituloL.text = "Título: " + self.titulo
         
+        tituloS = self.titulo
+        
         autoresL.text = "Autor: " + self.autores
+        
+        autoresS = self.autores
         
     }
 
@@ -99,6 +109,40 @@ class detalleVC: UIViewController {
             
             isbn = isbn1
             isbnTF.text = isbn1
+            
+            //--> Busco en la persistencia de datos
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let contexto2 = appDelegate.managedObjectContext
+            
+            let libroEntidad = NSEntityDescription.entityForName("Libro", inManagedObjectContext: contexto2)
+            
+            let peticion = libroEntidad?.managedObjectModel.fetchRequestFromTemplateWithName("obtLibro", substitutionVariables: ["isbn" : isbn])
+            
+            do{
+                let libroEntidad2 = try contexto2.executeFetchRequest(peticion!)
+                if (libroEntidad2.count > 0){
+                    for libroEntidad3 in libroEntidad2 {
+                        if libroEntidad3.valueForKey("isbn") != nil {
+                            if libroEntidad3.valueForKey("titulo") != nil {
+                                tituloL.text = libroEntidad3.valueForKey("titulo") as? String
+                            }
+                            if libroEntidad3.valueForKey("autores") != nil {
+                                autoresL.text = libroEntidad3.valueForKey("autores") as? String
+                            }
+                            if libroEntidad3.valueForKey("portada") != nil {
+                                portadaIV.image = UIImage(data: (libroEntidad3.valueForKey("portada") as? NSData)!)
+                            }
+                        }
+                    }
+                    
+                    return
+                }
+            }
+            catch {
+                
+            }
+            
+            // <-- Busco en la persistencia de datos
     
             sincrono()
             
@@ -114,9 +158,6 @@ class detalleVC: UIViewController {
     @IBAction func ingresaISBN(sender: AnyObject) {
         isbn = isbnTF.text!
         sincrono()
-
-        self.tupla.isbn = self.isbn
-        self.tupla.titulo = self.titulo
     }
     
     @IBAction func backgroundTap(sender: UIControl)
@@ -129,9 +170,66 @@ class detalleVC: UIViewController {
         sender.resignFirstResponder()  // Desaparecer el teclado
     }
     
+    func buscaEntidad()->Bool{
+        
+        var encontrado : Bool = false
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let contexto2 = appDelegate.managedObjectContext
+        
+        let libroEntidad = NSEntityDescription.entityForName("Libro", inManagedObjectContext: contexto2)
+        
+        let peticion = libroEntidad?.managedObjectModel.fetchRequestFromTemplateWithName("obtLibro", substitutionVariables: ["isbn" : isbn])
+        
+        do{
+            let libroEntidad2 = try contexto2.executeFetchRequest(peticion!)
+            if (libroEntidad2.count > 0){
+                encontrado = true
+            }
+        }
+        catch {
+            
+        }
+        return encontrado
+    }
+    
     override func viewWillDisappear(animated: Bool) {
      // call this method on whichever class implements our delegate protocol
+        self.tupla.isbn = ""
+        self.tupla.titulo = ""
+        
+     //--> Incluyo los datos en la B.D.
+     //   let nuevoLibroEntidad = NSEntityDescription.insertNewObjectForEntityForName("Libro", inManagedObjectContext: self.contexto2!)
+        //print("isbn1: \(isbn1) / isbnTF.text: \(isbnTF.text) / tituloS: \(tituloS)")
+        if (isbn1 == "")&&(isbnTF.text != "")&&(tituloS != "")&&(buscaEntidad() == false) {
+            
+            self.tupla.isbn = self.isbn
+            self.tupla.titulo = self.titulo
+            
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let contexto2 = appDelegate.managedObjectContext
+            let entidad = NSEntityDescription.entityForName("Libro", inManagedObjectContext: contexto2)
+            let nuevoLibroEntidad = NSManagedObject(entity: entidad!, insertIntoManagedObjectContext: contexto2)
+            nuevoLibroEntidad.setValue(isbnTF.text!, forKey: "isbn")
+            nuevoLibroEntidad.setValue(tituloS, forKey: "titulo")
+            if autoresL.text != "" {
+                nuevoLibroEntidad.setValue(autoresS, forKey: "autores")
+            }
+            if portadaIV.image != nil{
+                nuevoLibroEntidad.setValue(UIImagePNGRepresentation(portadaIV.image!), forKey: "portada")
+            }
+            do{
+                try contexto2.save()
+            }
+            catch{
+            
+            }
+        }
+        
         delegate?.userDidEnterInformation(tupla)
+        
+     //<-- Incluyo los datos en la B.D.
+        
     }
  
     override func didReceiveMemoryWarning() {

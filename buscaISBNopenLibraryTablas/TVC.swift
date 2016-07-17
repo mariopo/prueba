@@ -8,6 +8,7 @@
 
 
 import UIKit
+import CoreData
 
 struct Lista_Libros {
     var isbn: String
@@ -21,6 +22,8 @@ struct Lista_Libros {
 
 class TVC: UITableViewController, DataEnteredDelegate {
     
+    var contexto : NSManagedObjectContext? = nil
+    
     var tupla = Libros(isbn: "", titulo: "")
     var lista = [Lista_Libros]()
     
@@ -32,10 +35,34 @@ class TVC: UITableViewController, DataEnteredDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var list = Lista_Libros(isbn: "",titulo: "")
+        
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
         self.title = "LIBROS"
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        
+        let libroEntidad = NSEntityDescription.entityForName("Libro", inManagedObjectContext: self.contexto!)
+        
+        let peticion = libroEntidad?.managedObjectModel.fetchRequestTemplateForName("petLibros")
+        do{
+            let librosEntidad = try self.contexto?.executeFetchRequest(peticion!)
+            for libroEntidad2 in librosEntidad! {
+                if libroEntidad2.valueForKey("isbn") != nil {
+                    list.isbn = libroEntidad2.valueForKey("isbn") as! String
+                    if libroEntidad2.valueForKey("titulo") != nil {
+                        list.titulo = libroEntidad2.valueForKey("titulo") as! String
+                    }
+                    self.lista.append(list)
+                }
+            }
+        }
+        catch{
+            
+        }
+        self.tableView.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,10 +71,21 @@ class TVC: UITableViewController, DataEnteredDelegate {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    override func setEditing(editing: Bool, animated: Bool) {
+        // Toggles the edit button state
+        super.setEditing(editing, animated: animated)
+        // Toggles the actual editing actions appearing on a table view
+        tableView.setEditing(editing, animated: true)
+    }
+    
     override func viewWillAppear(animated: Bool) {
         var list = Lista_Libros(isbn: "",titulo: "")
         
         super.viewWillAppear(animated)
+        
+        if tupla.isbn == ""{
+            self.incluir = false
+        }
         
         if self.incluir {
             list.isbn = tupla.isbn
@@ -94,17 +132,47 @@ class TVC: UITableViewController, DataEnteredDelegate {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Celda", forIndexPath: indexPath)
+        var lisbn : String = ""
+        
         if editingStyle == .Delete {
             // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            let ip = indexPath.row
+            lisbn = self.lista[ip].isbn
+            
+            self.contexto = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+            
+            let libroEntidad = NSEntityDescription.entityForName("Libro", inManagedObjectContext: self.contexto!)
+            
+            let peticion = libroEntidad?.managedObjectModel.fetchRequestFromTemplateWithName("obtLibro", substitutionVariables: ["isbn" : lisbn])
+            
+            do{
+                let libroEntidad2 = try contexto!.executeFetchRequest(peticion!)
+                if (libroEntidad2.count > 0){
+                    if let registroABorrar = libroEntidad2.first{
+                        self.contexto!.deleteObject(registroABorrar as! NSManagedObject)
+                    }
+                }
+            }
+            catch {
+                
+            }
+            
+            tableView.indexPathForSelectedRow?.delete(cell)
+            self.lista.removeAtIndex(indexPath.row)
+            self.tableView.reloadData()
+            
+           // tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
