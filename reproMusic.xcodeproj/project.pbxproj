@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3141FE3C1D4DAF8D009B950C /* Marmol gris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3141FE3B1D4DAF8D009B950C /* Marmol gris.jpg */; };
+		3141FE3E1D4DC14F009B950C /* Feel so Good - Chuck Mangione.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3141FE3D1D4DC14F009B950C /* Feel so Good - Chuck Mangione.jpg */; };
+		31769BE01D4C846000E5D9E8 /* vlc-Earth, Wind September.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31769BDB1D4C846000E5D9E8 /* vlc-Earth, Wind September.mp3 */; };
+		31769BE11D4C846000E5D9E8 /* vlc-Feel so Good - Chuck Mangion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31769BDC1D4C846000E5D9E8 /* vlc-Feel so Good - Chuck Mangion.mp3 */; };
+		31769BE21D4C846000E5D9E8 /* vlc-Jarabe De Palo - La Flaca.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31769BDD1D4C846000E5D9E8 /* vlc-Jarabe De Palo - La Flaca.mp3 */; };
+		31769BE31D4C846000E5D9E8 /* vlc-Miguel Ríos-Todo a pulmón.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31769BDE1D4C846000E5D9E8 /* vlc-Miguel Ríos-Todo a pulmón.mp3 */; };
+		31769BE41D4C846000E5D9E8 /* vlc-Santana - Corazon Espinado - Mana.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31769BDF1D4C846000E5D9E8 /* vlc-Santana - Corazon Espinado - Mana.mp3 */; };
+		317BAD751D4C750B00F397F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BAD741D4C750B00F397F4 /* AppDelegate.swift */; };
+		317BAD771D4C750C00F397F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BAD761D4C750C00F397F4 /* ViewController.swift */; };
+		317BAD7A1D4C750C00F397F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317BAD781D4C750C00F397F4 /* Main.storyboard */; };
+		317BAD7C1D4C750C00F397F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 317BAD7B1D4C750C00F397F4 /* Assets.xcassets */; };
+		317BAD7F1D4C750C00F397F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317BAD7D1D4C750C00F397F4 /* LaunchScreen.storyboard */; };
+		317BAD8A1D4C750C00F397F4 /* reproMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BAD891D4C750C00F397F4 /* reproMusicTests.swift */; };
+		317BAD951D4C750C00F397F4 /* reproMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BAD941D4C750C00F397F4 /* reproMusicUITests.swift */; };
+		317BADB31D4C76BC00F397F4 /* i-am.png in Resources */ = {isa = PBXBuildFile; fileRef = 317BADAD1D4C76BC00F397F4 /* i-am.png */; };
+		317BADB41D4C76BC00F397F4 /* Jarabe de Palo - La Flaca 170x170.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 317BADAE1D4C76BC00F397F4 /* Jarabe de Palo - La Flaca 170x170.jpeg */; };
+		317BADB51D4C76BC00F397F4 /* Miguel Ríos - La Encrucijada 170x170.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 317BADAF1D4C76BC00F397F4 /* Miguel Ríos - La Encrucijada 170x170.jpeg */; };
+		317BADB71D4C76BC00F397F4 /* Supernatural - Santanta170x170.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 317BADB11D4C76BC00F397F4 /* Supernatural - Santanta170x170.jpeg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		317BAD861D4C750C00F397F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 317BAD691D4C750A00F397F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 317BAD701D4C750B00F397F4;
+			remoteInfo = reproMusic;
+		};
+		317BAD911D4C750C00F397F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 317BAD691D4C750A00F397F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 317BAD701D4C750B00F397F4;
+			remoteInfo = reproMusic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3141FE3B1D4DAF8D009B950C /* Marmol gris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Marmol gris.jpg"; sourceTree = "<group>"; };
+		3141FE3D1D4DC14F009B950C /* Feel so Good - Chuck Mangione.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Feel so Good - Chuck Mangione.jpg"; sourceTree = "<group>"; };
+		31769BDB1D4C846000E5D9E8 /* vlc-Earth, Wind September.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "vlc-Earth, Wind September.mp3"; sourceTree = "<group>"; };
+		31769BDC1D4C846000E5D9E8 /* vlc-Feel so Good - Chuck Mangion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "vlc-Feel so Good - Chuck Mangion.mp3"; sourceTree = "<group>"; };
+		31769BDD1D4C846000E5D9E8 /* vlc-Jarabe De Palo - La Flaca.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "vlc-Jarabe De Palo - La Flaca.mp3"; sourceTree = "<group>"; };
+		31769BDE1D4C846000E5D9E8 /* vlc-Miguel Ríos-Todo a pulmón.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "vlc-Miguel Ríos-Todo a pulmón.mp3"; sourceTree = "<group>"; };
+		31769BDF1D4C846000E5D9E8 /* vlc-Santana - Corazon Espinado - Mana.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "vlc-Santana - Corazon Espinado - Mana.mp3"; sourceTree = "<group>"; };
+		317BAD711D4C750B00F397F4 /* reproMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reproMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		317BAD741D4C750B00F397F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		317BAD761D4C750C00F397F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		317BAD791D4C750C00F397F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		317BAD7B1D4C750C00F397F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		317BAD7E1D4C750C00F397F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		317BAD801D4C750C00F397F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		317BAD851D4C750C00F397F4 /* reproMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reproMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		317BAD891D4C750C00F397F4 /* reproMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reproMusicTests.swift; sourceTree = "<group>"; };
+		317BAD8B1D4C750C00F397F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		317BAD901D4C750C00F397F4 /* reproMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reproMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		317BAD941D4C750C00F397F4 /* reproMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reproMusicUITests.swift; sourceTree = "<group>"; };
+		317BAD961D4C750C00F397F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		317BADAD1D4C76BC00F397F4 /* i-am.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "i-am.png"; sourceTree = "<group>"; };
+		317BADAE1D4C76BC00F397F4 /* Jarabe de Palo - La Flaca 170x170.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Jarabe de Palo - La Flaca 170x170.jpeg"; sourceTree = "<group>"; };
+		317BADAF1D4C76BC00F397F4 /* Miguel Ríos - La Encrucijada 170x170.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Miguel Ríos - La Encrucijada 170x170.jpeg"; sourceTree = "<group>"; };
+		317BADB11D4C76BC00F397F4 /* Supernatural - Santanta170x170.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Supernatural - Santanta170x170.jpeg"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		317BAD6E1D4C750B00F397F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		317BAD821D4C750C00F397F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		317BAD8D1D4C750C00F397F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		317BAD681D4C750A00F397F4 = {
+			isa = PBXGroup;
+			children = (
+				317BAD731D4C750B00F397F4 /* reproMusic */,
+				317BAD881D4C750C00F397F4 /* reproMusicTests */,
+				317BAD931D4C750C00F397F4 /* reproMusicUITests */,
+				317BAD721D4C750B00F397F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		317BAD721D4C750B00F397F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				317BAD711D4C750B00F397F4 /* reproMusic.app */,
+				317BAD851D4C750C00F397F4 /* reproMusicTests.xctest */,
+				317BAD901D4C750C00F397F4 /* reproMusicUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		317BAD731D4C750B00F397F4 /* reproMusic */ = {
+			isa = PBXGroup;
+			children = (
+				31769BDB1D4C846000E5D9E8 /* vlc-Earth, Wind September.mp3 */,
+				31769BDC1D4C846000E5D9E8 /* vlc-Feel so Good - Chuck Mangion.mp3 */,
+				31769BDD1D4C846000E5D9E8 /* vlc-Jarabe De Palo - La Flaca.mp3 */,
+				31769BDE1D4C846000E5D9E8 /* vlc-Miguel Ríos-Todo a pulmón.mp3 */,
+				31769BDF1D4C846000E5D9E8 /* vlc-Santana - Corazon Espinado - Mana.mp3 */,
+				3141FE3B1D4DAF8D009B950C /* Marmol gris.jpg */,
+				317BADAD1D4C76BC00F397F4 /* i-am.png */,
+				3141FE3D1D4DC14F009B950C /* Feel so Good - Chuck Mangione.jpg */,
+				317BADAE1D4C76BC00F397F4 /* Jarabe de Palo - La Flaca 170x170.jpeg */,
+				317BADAF1D4C76BC00F397F4 /* Miguel Ríos - La Encrucijada 170x170.jpeg */,
+				317BADB11D4C76BC00F397F4 /* Supernatural - Santanta170x170.jpeg */,
+				317BAD741D4C750B00F397F4 /* AppDelegate.swift */,
+				317BAD761D4C750C00F397F4 /* ViewController.swift */,
+				317BAD781D4C750C00F397F4 /* Main.storyboard */,
+				317BAD7B1D4C750C00F397F4 /* Assets.xcassets */,
+				317BAD7D1D4C750C00F397F4 /* LaunchScreen.storyboard */,
+				317BAD801D4C750C00F397F4 /* Info.plist */,
+			);
+			path = reproMusic;
+			sourceTree = "<group>";
+		};
+		317BAD881D4C750C00F397F4 /* reproMusicTests */ = {
+			isa = PBXGroup;
+			children = (
+				317BAD891D4C750C00F397F4 /* reproMusicTests.swift */,
+				317BAD8B1D4C750C00F397F4 /* Info.plist */,
+			);
+			path = reproMusicTests;
+			sourceTree = "<group>";
+		};
+		317BAD931D4C750C00F397F4 /* reproMusicUITests */ = {
+			isa = PBXGroup;
+			children = (
+				317BAD941D4C750C00F397F4 /* reproMusicUITests.swift */,
+				317BAD961D4C750C00F397F4 /* Info.plist */,
+			);
+			path = reproMusicUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		317BAD701D4C750B00F397F4 /* reproMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 317BAD991D4C750D00F397F4 /* Build configuration list for PBXNativeTarget "reproMusic" */;
+			buildPhases = (
+				317BAD6D1D4C750B00F397F4 /* Sources */,
+				317BAD6E1D4C750B00F397F4 /* Frameworks */,
+				317BAD6F1D4C750B00F397F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = reproMusic;
+			productName = reproMusic;
+			productReference = 317BAD711D4C750B00F397F4 /* reproMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		317BAD841D4C750C00F397F4 /* reproMusicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 317BAD9C1D4C750D00F397F4 /* Build configuration list for PBXNativeTarget "reproMusicTests" */;
+			buildPhases = (
+				317BAD811D4C750C00F397F4 /* Sources */,
+				317BAD821D4C750C00F397F4 /* Frameworks */,
+				317BAD831D4C750C00F397F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				317BAD871D4C750C00F397F4 /* PBXTargetDependency */,
+			);
+			name = reproMusicTests;
+			productName = reproMusicTests;
+			productReference = 317BAD851D4C750C00F397F4 /* reproMusicTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		317BAD8F1D4C750C00F397F4 /* reproMusicUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 317BAD9F1D4C750D00F397F4 /* Build configuration list for PBXNativeTarget "reproMusicUITests" */;
+			buildPhases = (
+				317BAD8C1D4C750C00F397F4 /* Sources */,
+				317BAD8D1D4C750C00F397F4 /* Frameworks */,
+				317BAD8E1D4C750C00F397F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				317BAD921D4C750C00F397F4 /* PBXTargetDependency */,
+			);
+			name = reproMusicUITests;
+			productName = reproMusicUITests;
+			productReference = 317BAD901D4C750C00F397F4 /* reproMusicUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		317BAD691D4C750A00F397F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = MAPC;
+				TargetAttributes = {
+					317BAD701D4C750B00F397F4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					317BAD841D4C750C00F397F4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 317BAD701D4C750B00F397F4;
+					};
+					317BAD8F1D4C750C00F397F4 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 317BAD701D4C750B00F397F4;
+					};
+				};
+			};
+			buildConfigurationList = 317BAD6C1D4C750B00F397F4 /* Build configuration list for PBXProject "reproMusic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 317BAD681D4C750A00F397F4;
+			productRefGroup = 317BAD721D4C750B00F397F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				317BAD701D4C750B00F397F4 /* reproMusic */,
+				317BAD841D4C750C00F397F4 /* reproMusicTests */,
+				317BAD8F1D4C750C00F397F4 /* reproMusicUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		317BAD6F1D4C750B00F397F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3141FE3E1D4DC14F009B950C /* Feel so Good - Chuck Mangione.jpg in Resources */,
+				317BADB31D4C76BC00F397F4 /* i-am.png in Resources */,
+				31769BE11D4C846000E5D9E8 /* vlc-Feel so Good - Chuck Mangion.mp3 in Resources */,
+				317BAD7F1D4C750C00F397F4 /* LaunchScreen.storyboard in Resources */,
+				317BAD7C1D4C750C00F397F4 /* Assets.xcassets in Resources */,
+				31769BE31D4C846000E5D9E8 /* vlc-Miguel Ríos-Todo a pulmón.mp3 in Resources */,
+				317BADB71D4C76BC00F397F4 /* Supernatural - Santanta170x170.jpeg in Resources */,
+				31769BE21D4C846000E5D9E8 /* vlc-Jarabe De Palo - La Flaca.mp3 in Resources */,
+				31769BE01D4C846000E5D9E8 /* vlc-Earth, Wind September.mp3 in Resources */,
+				317BADB41D4C76BC00F397F4 /* Jarabe de Palo - La Flaca 170x170.jpeg in Resources */,
+				317BADB51D4C76BC00F397F4 /* Miguel Ríos - La Encrucijada 170x170.jpeg in Resources */,
+				3141FE3C1D4DAF8D009B950C /* Marmol gris.jpg in Resources */,
+				31769BE41D4C846000E5D9E8 /* vlc-Santana - Corazon Espinado - Mana.mp3 in Resources */,
+				317BAD7A1D4C750C00F397F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		317BAD831D4C750C00F397F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		317BAD8E1D4C750C00F397F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		317BAD6D1D4C750B00F397F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				317BAD771D4C750C00F397F4 /* ViewController.swift in Sources */,
+				317BAD751D4C750B00F397F4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		317BAD811D4C750C00F397F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				317BAD8A1D4C750C00F397F4 /* reproMusicTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		317BAD8C1D4C750C00F397F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				317BAD951D4C750C00F397F4 /* reproMusicUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		317BAD871D4C750C00F397F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 317BAD701D4C750B00F397F4 /* reproMusic */;
+			targetProxy = 317BAD861D4C750C00F397F4 /* PBXContainerItemProxy */;
+		};
+		317BAD921D4C750C00F397F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 317BAD701D4C750B00F397F4 /* reproMusic */;
+			targetProxy = 317BAD911D4C750C00F397F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		317BAD781D4C750C00F397F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				317BAD791D4C750C00F397F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		317BAD7D1D4C750C00F397F4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				317BAD7E1D4C750C00F397F4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		317BAD971D4C750C00F397F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		317BAD981D4C750C00F397F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		317BAD9A1D4C750D00F397F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = reproMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cr.mapc.reproMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		317BAD9B1D4C750D00F397F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = reproMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cr.mapc.reproMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		317BAD9D1D4C750D00F397F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = reproMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cr.mapc.reproMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reproMusic.app/reproMusic";
+			};
+			name = Debug;
+		};
+		317BAD9E1D4C750D00F397F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = reproMusicTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cr.mapc.reproMusicTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reproMusic.app/reproMusic";
+			};
+			name = Release;
+		};
+		317BADA01D4C750D00F397F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = reproMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cr.mapc.reproMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = reproMusic;
+			};
+			name = Debug;
+		};
+		317BADA11D4C750D00F397F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = reproMusicUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cr.mapc.reproMusicUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = reproMusic;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		317BAD6C1D4C750B00F397F4 /* Build configuration list for PBXProject "reproMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				317BAD971D4C750C00F397F4 /* Debug */,
+				317BAD981D4C750C00F397F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		317BAD991D4C750D00F397F4 /* Build configuration list for PBXNativeTarget "reproMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				317BAD9A1D4C750D00F397F4 /* Debug */,
+				317BAD9B1D4C750D00F397F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		317BAD9C1D4C750D00F397F4 /* Build configuration list for PBXNativeTarget "reproMusicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				317BAD9D1D4C750D00F397F4 /* Debug */,
+				317BAD9E1D4C750D00F397F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		317BAD9F1D4C750D00F397F4 /* Build configuration list for PBXNativeTarget "reproMusicUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				317BADA01D4C750D00F397F4 /* Debug */,
+				317BADA11D4C750D00F397F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 317BAD691D4C750A00F397F4 /* Project object */;
+}
