@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var primeraVez :Bool = true
     
     let cancionesArr = ["vlc-Earth, Wind September","vlc-Feel so Good - Chuck Mangion","vlc-Jarabe De Palo - La Flaca","vlc-Miguel Ríos-Todo a pulmón","vlc-Santana - Corazon Espinado - Mana"]
-    let titulosArr = ["September - Earth, Wind & Fire","Feel so Good - Chuck Mangione","La Flaca - Jarabe De Palo","Todo a pulmón - Miguel Ríos","Corazon Espinado - Santana - Mana"]
+    let titulosArr = ["September - Earth, Wind & Fire","Feel so Good - Chuck Mangione","La Flaca - Jarabe De Palo","Todo a pulmón - Miguel Ríos","Corazón Espinado - Santana - Maná"]
     let portadasArr = ["i-am","Feel so Good - Chuck Mangione","Jarabe de Palo - La Flaca 170x170","Miguel Ríos - La Encrucijada 170x170","Supernatural - Santanta170x170"]
     
     let extensionPortada = ["png","jpg","jpeg","jpeg","jpeg"]
@@ -54,7 +54,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         tam = self.pickerView(myPicker, titleForRow: row, forComponent: component)!
         pizzaL.text = leyenda1 + self.pickerView(myPicker, titleForRow: row, forComponent: component)!
         */
+        detener()
         cargaCancion(cancionesPV.selectedRowInComponent(0))
+        tocar()
     }
     
     func cargaCancion(row: Int) {
@@ -94,9 +96,11 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     @IBAction func aleatorio() {
+        detener()
         let row = randRange(0, upper: (cancionesArr.count - 1))
         cancionesPV.selectRow(row, inComponent: 0, animated: true)
         cargaCancion(row)
+        tocar()
     }
     @IBAction func sliderValueChanged(sender: UISlider) {
         reproductor.volume = sender.value
