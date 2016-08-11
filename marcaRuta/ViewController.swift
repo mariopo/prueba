@@ -34,6 +34,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if status == .AuthorizedWhenInUse{
             manejador.startUpdatingLocation()
             mapa.showsUserLocation = true
+            mapa.userTrackingMode = .Follow
         }else{
             manejador.stopUpdatingLocation()
             mapa.showsUserLocation = false
